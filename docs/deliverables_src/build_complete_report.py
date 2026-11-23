@@ -1,5 +1,5 @@
-"""Complete project report = the technical report + development history, formula compendium, results compendium,
-folded-joint handling and open items. Reuses build_report.py (same chapters 1-13) and inserts chapters 14-18.
+﻿"""Complete project report = the technical report + development history, formula compendium, results compendium,
+folded-joint handling and open items. Reuses build_report.py (same chapters 1-13) and inserts chapters 14-19.
 
 Run from the project root:
   .venv312\\Scripts\\python.exe docs/deliverables_src/build_complete_report.py
@@ -200,8 +200,54 @@ doc.p(f"Observed in open–close recordings: any hidden joint {pct(vis['ANY'], 0
       f"{pct(vis['IP'], 0)}, PIP {pct(vis['PIP'], 0)}, MCP {pct(vis['MCP'], 0)}. Static recordings: 0 %. The rule's thresholds were set "
       "by inspecting the data and have not been checked against hand-labelled visibility.")
 
-# ============================================================================ 18 open items
-doc.h("18. Open Items")
+# ============================================================================ 18 footprint, intermediate outputs, source code
+doc.h("18. Intermediate Outputs, Model Footprint and Source Code")
+doc.h("18.1 Intermediate outputs of one frame", 2)
+doc.p("Each stage of the pipeline produces an output that can be inspected. The figure follows one real frame "
+      "(S2_right_static) from the RGB landmarks to the joint temperatures. The same steps run on every frame; the final "
+      "value per joint is the median over the usable frames (Chapter 8).")
+doc.figure(FIG / "S01_intermediate_outputs.png",
+           f"Intermediate outputs on one frame (measured data): landmarks, thermal frame, thermal mask, calibration check "
+           f"(median Dice {f(V3['dice_median'], 3)} over all recordings), joint ROIs and joint temperatures.", 16)
+doc.h("18.2 Model footprint", 2)
+_lm = Path("models/hand_landmarker.task").stat().st_size / 2**20
+_reg = sorted(Path("models/registry").glob("v7_mahalanobis_ledoit_wolf*/*.joblib"))
+_mod_kb = max(p_.stat().st_size for p_ in _reg) / 1024 if _reg else float("nan")
+_cal_kb = Path("models/calibration/flirone_one_pro_v9_found.json").stat().st_size / 1024
+_lwc = next(r for r in V7["comparison"] if r["model"] == "mahalanobis_ledoit_wolf")
+doc.p("The trained model is a statistical healthy reference, not a neural network: it stores the mean of the 32 features "
+      "and a 32 × 32 Ledoit–Wolf covariance matrix (about one thousand numbers). The only neural network is the "
+      "pre-trained MediaPipe hand landmarker, which is designed for mobile phones. No GPU is used anywhere.")
+doc.table(["Component", "Size on disk", "Time", "Note"],
+          [["Anomaly model (Ledoit–Wolf Mahalanobis)", f"{_mod_kb:.1f} KB", f"{_lwc['score_us_per_hand'] / 1000:.2f} ms per hand",
+            f"training {_lwc['train_ms_per_fold_incl_threshold']:.0f} ms per fold incl. threshold"],
+           ["Calibration profile (v9)", f"{_cal_kb:.1f} KB", "one matrix per frame", "scale, rotation, shift model"],
+           ["MediaPipe hand landmarker (pre-trained)", f"{_lm:.1f} MB", f"{f(V3['ms_parts']['landmarks'], 1)} ms per frame", "not trained by us"],
+           ["Thermal hand mask", "—", f"{f(V3['ms_parts']['thermal_mask'], 1)} ms per frame", "Otsu + hysteresis"],
+           ["Joint ROIs and sampling", "—", f"{f(V3['ms_parts']['rois'], 1)} ms per frame", "14 joints + dorsum"],
+           ["Whole pipeline", "—", f"{f(V3['ms_frame'], 1)} ms per frame (≈ {V3['fps']:.0f} fps)",
+            f"memory {V3['rss_model']:.0f} MB loaded, {V3['rss_peak']:.0f} MB peak"]],
+          "Model size and computation on a laptop CPU (measured).", widths=[5.0, 2.4, 4.0, 5.0], size=9)
+doc.p("The live mode was tested only by replaying a recording (about 17 frames per second end to end); it has not yet been "
+      "run on a phone or edge device.", italic=True)
+doc.h("18.3 Source code", 2)
+doc.p("The source code, trained models, calibration profile, tests, installer, reports and presentation material are published at "
+      "https://github.com/Rohitvegi/D2JTD-Vision. Datasets, processed data and Python environments are not included: "
+      "the recordings belong to the FLIROne dataset and the processed frames are large.")
+doc.table(["Folder", "Contents"],
+          [["src/", "pipeline modules: calibration, registration, segmentation, landmarks, rois, features, models, reports, CLI"],
+           ["ui/", "desktop application (PySide6)"],
+           ["models/", "hand landmarker, saved anomaly models with SHA-256, calibration profiles"],
+           ["tests/", "automated tests (50) and test fixtures"],
+           ["reports/, results/", "analysis outputs per version"],
+           ["deliverables/", "reports, slides, figures, supporting metrics"],
+           ["install.ps1, requirements.lock.txt", "offline-capable installation with pinned versions"]],
+          "Repository structure.", widths=[5.0, 11.4], size=9)
+doc.p("To install on another PC: clone the repository, run install.ps1, then python -m src.cli doctor (must say READY) and "
+      "python -m src.cli app.")
+
+# ============================================================================ 19 open items
+doc.h("19. Open Items")
 doc.table(["Item", "Effect", "Next step"],
           [["No arthritis patients", "detection of disease not measurable; sensitivity only simulated", "labelled patient cohort with reference diagnosis"],
            ["17 subjects", "wide confidence intervals", "≥ 50 subjects"],
@@ -225,7 +271,7 @@ def main():
                   "\"RGB–Thermal Hand-Joint Temperature Analysis — Complete Project Report · page \"\n", 1)
     anchor = "# ============================================================================ 12 conclusion"
     assert anchor in s and 'doc.h("14. Conclusion")' in s
-    s = s.replace(anchor, NEW_CHAPTERS + anchor).replace('doc.h("14. Conclusion")', 'doc.h("19. Conclusion")')
+    s = s.replace(anchor, NEW_CHAPTERS + anchor).replace('doc.h("14. Conclusion")', 'doc.h("20. Conclusion")')
     g = {"__file__": str(src_path), "__name__": "__complete__"}
     exec(compile(s, str(src_path), "exec"), g)
     print("complete report:", g["OUT"])
