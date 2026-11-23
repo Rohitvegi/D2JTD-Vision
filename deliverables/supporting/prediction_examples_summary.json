@@ -1,0 +1,17 @@
+{
+ "n_hands": 34,
+ "real_correct": 32,
+ "warmed_correct": 34,
+ "warm": "index_MCP +2.0 C (simulated, frame level)",
+ "model": "v7_mahalanobis_ledoit_wolf_20261121_172656",
+ "gallery": [
+  "S10_right_static",
+  "S16_right_static",
+  "S5_right_static",
+  "S15_right_static",
+  "S9_left_static",
+  "S1_right_static"
+ ],
+ "detection_example": "S10_right_static",
+ "top_feature_is_warmed_joint": 34
+}

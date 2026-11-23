@@ -1,0 +1,97 @@
+{
+  "model_id": "v7_robust_covariance_mcd_20261121_170159",
+  "model_type": "robust_covariance_mcd",
+  "created": "2026-11-21T17:01:59",
+  "task": "healthy-reference anomaly detection (NOT an arthritis classifier)",
+  "training_dataset": "FLIROne (17 healthy volunteers), static recordings, one row per hand",
+  "training_subjects": [
+    "S1",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "n_training_hands": 34,
+  "features": [
+    "thumb_MCP_D2JTD",
+    "thumb_IP_D2JTD",
+    "index_MCP_D2JTD",
+    "index_PIP_D2JTD",
+    "index_DIP_D2JTD",
+    "middle_MCP_D2JTD",
+    "middle_PIP_D2JTD",
+    "middle_DIP_D2JTD",
+    "ring_MCP_D2JTD",
+    "ring_PIP_D2JTD",
+    "ring_DIP_D2JTD",
+    "little_MCP_D2JTD",
+    "little_PIP_D2JTD",
+    "little_DIP_D2JTD"
+  ],
+  "feature_source": "reports\\results\\features_per_recording.csv",
+  "feature_sha256": "3e0c09031f62bceb9349ae1c64a6eb928e9f0690bab025b76489689fc502d4d0",
+  "preprocessing": {
+    "imputation": "median of training hands",
+    "scaling": "model-internal",
+    "out_of_range_margin": "25 % of training range per feature"
+  },
+  "threshold": {
+    "value": 15.685218408867163,
+    "method": "0.95 quantile of leave-one-subject-out scores of training subjects"
+  },
+  "calibration_version": "ff4afad281e0",
+  "validation": {
+    "model": "robust_covariance_mcd",
+    "specificity": 0.9411764705882353,
+    "specificity_ci": [
+      0.8529411764705882,
+      1.0
+    ],
+    "false_out_of_range_rate": 0.058823529411764705,
+    "train_ms_per_fold_incl_threshold": 543.7644999765325,
+    "score_us_per_hand": 229.199999012053,
+    "threshold_cv": 0.11048712427467765,
+    "sens_single_joint_0.5C": 0.10714285714285714,
+    "sens_single_joint_1C": 0.3319327731092437,
+    "sens_single_joint_2C": 0.8025210084033614,
+    "sens_MCP_only_0.5C": 0.11764705882352941,
+    "sens_MCP_only_1C": 0.3235294117647059,
+    "sens_MCP_only_2C": 1.0,
+    "sens_PIP_only_0.5C": 0.08823529411764706,
+    "sens_PIP_only_1C": 0.35294117647058826,
+    "sens_PIP_only_2C": 1.0,
+    "sens_DIP_only_0.5C": 0.08823529411764706,
+    "sens_DIP_only_1C": 0.11764705882352941,
+    "sens_DIP_only_2C": 0.5588235294117647,
+    "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+    "sens_all_10_MCP_PIP_1C": 0.29411764705882354,
+    "sens_all_10_MCP_PIP_2C": 1.0,
+    "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+    "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+    "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+    "sens_all10_1C_ci": [
+      0.11764705882352941,
+      0.47058823529411764
+    ],
+    "selection_score": 0.6792717086834733,
+    "eval_seconds": 11.4
+  },
+  "software": {
+    "python": "3.12.14",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.5"
+  },
+  "limitations": "Healthy subjects only; validation uses simulated warming; scores are not probabilities."
+}

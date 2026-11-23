@@ -1,0 +1,3 @@
+task,frames,detected,passed_checks,valid,reordered_index_little,reordered_middle_ring,mcp_collapse,out_of_image
+open_close,9210,0.999457111834962,0.9985884907709012,0.9973941368078176,0.0,0.0,0.0008690928843020098,0.0
+static,9226,1.0,1.0,1.0,0.0,0.0,0.0,0.0

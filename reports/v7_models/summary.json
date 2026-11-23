@@ -1,0 +1,269 @@
+{
+  "selected_model": "robust_covariance_mcd",
+  "selection_rule": "max mean(specificity, sens all-10 +1C, sens single-joint +2C)",
+  "n_subjects": 17,
+  "n_hands": 34,
+  "comparison": [
+    {
+      "model": "robust_covariance_mcd",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8529411764705882,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 543.7644999765325,
+      "score_us_per_hand": 229.199999012053,
+      "threshold_cv": 0.11048712427467765,
+      "sens_single_joint_0.5C": 0.10714285714285714,
+      "sens_single_joint_1C": 0.3319327731092437,
+      "sens_single_joint_2C": 0.8025210084033614,
+      "sens_MCP_only_0.5C": 0.11764705882352941,
+      "sens_MCP_only_1C": 0.3235294117647059,
+      "sens_MCP_only_2C": 1.0,
+      "sens_PIP_only_0.5C": 0.08823529411764706,
+      "sens_PIP_only_1C": 0.35294117647058826,
+      "sens_PIP_only_2C": 1.0,
+      "sens_DIP_only_0.5C": 0.08823529411764706,
+      "sens_DIP_only_1C": 0.11764705882352941,
+      "sens_DIP_only_2C": 0.5588235294117647,
+      "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_1C": 0.29411764705882354,
+      "sens_all_10_MCP_PIP_2C": 1.0,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.11764705882352941,
+        0.47058823529411764
+      ],
+      "selection_score": 0.6792717086834733,
+      "eval_seconds": 11.4
+    },
+    {
+      "model": "one_class_svm",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8235294117647058,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 32.14299998944625,
+      "score_us_per_hand": 208.2999999402091,
+      "threshold_cv": 0.12998479325013465,
+      "sens_single_joint_0.5C": 0.06302521008403361,
+      "sens_single_joint_1C": 0.08823529411764706,
+      "sens_single_joint_2C": 0.25840336134453784,
+      "sens_MCP_only_0.5C": 0.08823529411764706,
+      "sens_MCP_only_1C": 0.7352941176470589,
+      "sens_MCP_only_2C": 1.0,
+      "sens_PIP_only_0.5C": 0.08823529411764706,
+      "sens_PIP_only_1C": 0.11764705882352941,
+      "sens_PIP_only_2C": 0.14705882352941177,
+      "sens_DIP_only_0.5C": 0.08823529411764706,
+      "sens_DIP_only_1C": 0.08823529411764706,
+      "sens_DIP_only_2C": 0.11764705882352941,
+      "sens_all_10_MCP_PIP_0.5C": 0.11764705882352941,
+      "sens_all_10_MCP_PIP_1C": 0.6470588235294118,
+      "sens_all_10_MCP_PIP_2C": 1.0,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.4411764705882353,
+        0.8235294117647058
+      ],
+      "selection_score": 0.615546218487395,
+      "eval_seconds": 2.8
+    },
+    {
+      "model": "mahalanobis_ledoit_wolf",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8235294117647058,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 22.67320000100881,
+      "score_us_per_hand": 193.14998644404113,
+      "threshold_cv": 0.032335095987140364,
+      "sens_single_joint_0.5C": 0.058823529411764705,
+      "sens_single_joint_1C": 0.06512605042016807,
+      "sens_single_joint_2C": 0.4096638655462185,
+      "sens_MCP_only_0.5C": 0.058823529411764705,
+      "sens_MCP_only_1C": 0.47058823529411764,
+      "sens_MCP_only_2C": 1.0,
+      "sens_PIP_only_0.5C": 0.058823529411764705,
+      "sens_PIP_only_1C": 0.23529411764705882,
+      "sens_PIP_only_2C": 1.0,
+      "sens_DIP_only_0.5C": 0.058823529411764705,
+      "sens_DIP_only_1C": 0.08823529411764706,
+      "sens_DIP_only_2C": 0.7941176470588235,
+      "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_1C": 0.38235294117647056,
+      "sens_all_10_MCP_PIP_2C": 1.0,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.20588235294117646,
+        0.5882352941176471
+      ],
+      "selection_score": 0.5777310924369748,
+      "eval_seconds": 2.6
+    },
+    {
+      "model": "robust_z_max",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8235294117647058,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 6.7171000118833035,
+      "score_us_per_hand": 7.6500000432133675,
+      "threshold_cv": 0.12929268273009883,
+      "sens_single_joint_0.5C": 0.058823529411764705,
+      "sens_single_joint_1C": 0.06092436974789916,
+      "sens_single_joint_2C": 0.19117647058823528,
+      "sens_MCP_only_0.5C": 0.058823529411764705,
+      "sens_MCP_only_1C": 0.08823529411764706,
+      "sens_MCP_only_2C": 0.7352941176470589,
+      "sens_PIP_only_0.5C": 0.058823529411764705,
+      "sens_PIP_only_1C": 0.058823529411764705,
+      "sens_PIP_only_2C": 0.08823529411764706,
+      "sens_DIP_only_0.5C": 0.058823529411764705,
+      "sens_DIP_only_1C": 0.058823529411764705,
+      "sens_DIP_only_2C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_1C": 0.08823529411764706,
+      "sens_all_10_MCP_PIP_2C": 0.7352941176470589,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.0,
+        0.23529411764705882
+      ],
+      "selection_score": 0.40686274509803916,
+      "eval_seconds": 1.5
+    },
+    {
+      "model": "mahalanobis_diag",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8235294117647058,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 5.823000014061108,
+      "score_us_per_hand": 8.149989298544824,
+      "threshold_cv": 0.055985821564188895,
+      "sens_single_joint_0.5C": 0.058823529411764705,
+      "sens_single_joint_1C": 0.058823529411764705,
+      "sens_single_joint_2C": 0.06302521008403361,
+      "sens_MCP_only_0.5C": 0.058823529411764705,
+      "sens_MCP_only_1C": 0.08823529411764706,
+      "sens_MCP_only_2C": 0.6470588235294118,
+      "sens_PIP_only_0.5C": 0.058823529411764705,
+      "sens_PIP_only_1C": 0.058823529411764705,
+      "sens_PIP_only_2C": 0.08823529411764706,
+      "sens_DIP_only_0.5C": 0.058823529411764705,
+      "sens_DIP_only_1C": 0.058823529411764705,
+      "sens_DIP_only_2C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_1C": 0.08823529411764706,
+      "sens_all_10_MCP_PIP_2C": 0.7647058823529411,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.0,
+        0.23529411764705882
+      ],
+      "selection_score": 0.3641456582633053,
+      "eval_seconds": 1.5
+    },
+    {
+      "model": "isolation_forest",
+      "specificity": 0.9411764705882353,
+      "specificity_ci": [
+        0.8235294117647058,
+        1.0
+      ],
+      "false_out_of_range_rate": 0.058823529411764705,
+      "train_ms_per_fold_incl_threshold": 3798.302400013199,
+      "score_us_per_hand": 6856.699998024851,
+      "threshold_cv": 0.014622978922498062,
+      "sens_single_joint_0.5C": 0.058823529411764705,
+      "sens_single_joint_1C": 0.058823529411764705,
+      "sens_single_joint_2C": 0.058823529411764705,
+      "sens_MCP_only_0.5C": 0.058823529411764705,
+      "sens_MCP_only_1C": 0.029411764705882353,
+      "sens_MCP_only_2C": 0.058823529411764705,
+      "sens_PIP_only_0.5C": 0.058823529411764705,
+      "sens_PIP_only_1C": 0.058823529411764705,
+      "sens_PIP_only_2C": 0.058823529411764705,
+      "sens_DIP_only_0.5C": 0.058823529411764705,
+      "sens_DIP_only_1C": 0.058823529411764705,
+      "sens_DIP_only_2C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_0.5C": 0.058823529411764705,
+      "sens_all_10_MCP_PIP_1C": 0.029411764705882353,
+      "sens_all_10_MCP_PIP_2C": 0.08823529411764706,
+      "sens_diffuse_whole_hand_0.5C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_1C": 0.058823529411764705,
+      "sens_diffuse_whole_hand_2C": 0.058823529411764705,
+      "sens_all10_1C_ci": [
+        0.0,
+        0.08823529411764706
+      ],
+      "selection_score": 0.34313725490196073,
+      "eval_seconds": 97.4
+    }
+  ],
+  "learning_curve": [
+    {
+      "n_train": 4,
+      "specificity": 0.741,
+      "sens_all10_1C": 0.774
+    },
+    {
+      "n_train": 6,
+      "specificity": 0.715,
+      "sens_all10_1C": 0.679
+    },
+    {
+      "n_train": 8,
+      "specificity": 0.826,
+      "sens_all10_1C": 0.565
+    },
+    {
+      "n_train": 10,
+      "specificity": 0.588,
+      "sens_all10_1C": 0.644
+    },
+    {
+      "n_train": 12,
+      "specificity": 0.988,
+      "sens_all10_1C": 0.032
+    },
+    {
+      "n_train": 14,
+      "specificity": 0.985,
+      "sens_all10_1C": 0.124
+    },
+    {
+      "n_train": 16,
+      "specificity": 0.941,
+      "sens_all10_1C": 0.294
+    }
+  ],
+  "v3_reference": {
+    "note": "v3 thresholds were set in-sample",
+    "maxz_specificity": 0.94,
+    "mahalanobis_specificity": 0.88
+  },
+  "saved_bundle": "models\\registry\\v7_robust_covariance_mcd_20261121_170159",
+  "stable_alternative_bundle": "models\\registry\\v7_mahalanobis_ledoit_wolf_20261121_170310",
+  "stability_note": "Learning curves: robust_covariance_mcd is unstable below 12 training subjects (specificity 0.59-0.83); mahalanobis_ledoit_wolf keeps specificity 0.88-0.94 at every size. Use the Ledoit-Wolf bundle when retraining on few subjects."
+}

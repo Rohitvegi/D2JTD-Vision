@@ -1,0 +1,9 @@
+{
+  "description": "Along-finger joint correction learned from hand-clicked thermal joints (fraction of MCP-PIP bone length; positive = towards fingertip). PIP value also applied to thumb IP and DIP joints (extrapolated).",
+  "along_frac": {
+    "MCP": 0.09297230480178606,
+    "PIP": 0.10674532225588661
+  },
+  "n_points": 777,
+  "n_frames": 136
+}

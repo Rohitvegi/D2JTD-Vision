@@ -1,0 +1,14 @@
+{
+ "models/hand_landmarker.task": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+ "models/landmark_correction.json": "bad1c3f06cc860addb03caa1f76440825562837403cc08968afe4adbf774daa9",
+ "models/healthy_reference.json": "cf169e36e5175d9a55fd500540943af82ac393c411645702e7c7dcdea91f74fa",
+ "models/calibration/flirone_one_pro_v3.json": "6a5c48c1e971ef1317072d78d9cdc8dfa3764bc12e6f966b14438a87e341d746",
+ "models/calibration/flirone_one_pro_v9_found.json": "838a3a1e6976eefd7382237106f088cbb354ced0785730192ae5c58d17719f1f",
+ "models/calibration/flirone_one_pro_v9_learned.json": "810c1c59949a89b0f8821f8d84e99922304bf0b3b95d037a903007d239194854",
+ "models/registry/v7_mahalanobis_ledoit_wolf_20261121_170310/bundle.joblib": "748e572552013ea1acc5402abab5aa9037acdcf907f35fdf85447c9948c6516f",
+ "models/registry/v7_mahalanobis_ledoit_wolf_20261121_170310/metadata.json": "e3d2ce22793a5ceba2e08887b742e7afeabca5c3ad4991d870495db07ae422c5",
+ "models/registry/v7_mahalanobis_ledoit_wolf_20261121_172656/bundle.joblib": "350f8750248a9f6218af19ad115d7e8848f14f32647df0fad5a84897cead5fd5",
+ "models/registry/v7_mahalanobis_ledoit_wolf_20261121_172656/metadata.json": "7b49598a26dffafdf8ee8c44d5facbed091ab97eb0868253e97814dfe5c27eb8",
+ "models/registry/v7_robust_covariance_mcd_20261121_170159/bundle.joblib": "410ae51d8ed4cf8fbc414a85d5446ded0c93865dc60f902aee2e84d53e56bced",
+ "models/registry/v7_robust_covariance_mcd_20261121_170159/metadata.json": "60184f9b4b5a0005b66d54238ee588f3824611c758b080b3733d93d4819c4601"
+}

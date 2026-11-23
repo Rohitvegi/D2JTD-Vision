@@ -1,0 +1,6 @@
+# Only needed to rebuild the report/slides in deliverables/ (docs/deliverables_src)
+python-docx==1.2.0
+python-pptx==1.0.2
+pymupdf==2.1
+lxml==6.1.3
+xlsxwriter==3.3.3

@@ -1,0 +1,13 @@
+{
+  "run_id": "mini_test__v7_mahalanobis_ledoit_wolf_20261121_172656__20261121_173135",
+  "dataset_id": "mini_test_20261121_173112",
+  "model_id": "v7_mahalanobis_ledoit_wolf_20261121_172656",
+  "created": "2026-11-21T17:31:35",
+  "features_sha256": "768065e6be16762336d3df5b206899b26e63985a67c6992952008edf42c2ebd4",
+  "manifest_sha256": "c1f3f36e0fd74ed136c4659d5e0a3ba1576d202f50b9b8194f3cf07022b6bc5d",
+  "model_sha256": "350f8750248a9f6218af19ad115d7e8848f14f32647df0fad5a84897cead5fd5",
+  "labels_sha256": "a9b7e1e5e3277e288d2457053cc3ae5db3c58f814324b961dcc31eb7bdf6d6fc",
+  "rule": "model applied as saved: no refitting, rescaling or threshold changes",
+  "previous_runs_same_dataset_and_model": [],
+  "subjects_overlapping_training": []
+}

@@ -1,0 +1,71 @@
+2026-11-21 12:39:00,729 INFO Found 17 subjects, 68 expected recordings
+2026-11-21 12:39:07,117 INFO [ 1/68] S1_left_static             6.4s  OK
+2026-11-21 12:39:13,324 INFO [ 2/68] S1_left_open_close         6.2s  OK
+2026-11-21 12:39:19,493 INFO [ 3/68] S1_right_static            6.2s  OK
+2026-11-21 12:39:25,733 INFO [ 4/68] S1_right_open_close        6.2s  OK
+2026-11-21 12:39:32,316 INFO [ 5/68] S2_left_static             6.6s  OK
+2026-11-21 12:39:39,484 INFO [ 6/68] S2_left_open_close         7.2s  OK
+2026-11-21 12:39:46,300 INFO [ 7/68] S2_right_static            6.8s  OK
+2026-11-21 12:39:53,419 INFO [ 8/68] S2_right_open_close        7.1s  OK
+2026-11-21 12:40:00,433 INFO [ 9/68] S3_left_static             7.0s  OK
+2026-11-21 12:40:08,186 INFO [10/68] S3_left_open_close         7.8s  OK
+2026-11-21 12:40:16,587 INFO [11/68] S3_right_static            8.4s  OK
+2026-11-21 12:40:25,919 INFO [12/68] S3_right_open_close        9.3s  OK
+2026-11-21 12:40:34,084 INFO [13/68] S4_left_static             8.2s  OK
+2026-11-21 12:40:41,322 INFO [14/68] S4_left_open_close         7.2s  OK
+2026-11-21 12:40:48,442 INFO [15/68] S4_right_static            7.1s  OK
+2026-11-21 12:40:55,782 INFO [16/68] S4_right_open_close        7.3s  OK
+2026-11-21 12:41:04,666 INFO [17/68] S5_left_static             8.9s  OK
+2026-11-21 12:41:12,237 INFO [18/68] S5_left_open_close         7.6s  OK
+2026-11-21 12:41:19,162 INFO [19/68] S5_right_static            6.9s  OK
+2026-11-21 12:41:26,067 INFO [20/68] S5_right_open_close        6.9s  OK
+2026-11-21 12:41:33,139 INFO [21/68] S6_left_static             7.1s  OK
+2026-11-21 12:41:40,110 INFO [22/68] S6_left_open_close         7.0s  OK
+2026-11-21 12:41:47,057 INFO [23/68] S6_right_static            6.9s  OK
+2026-11-21 12:41:54,080 INFO [24/68] S6_right_open_close        7.0s  OK
+2026-11-21 12:42:01,091 INFO [25/68] S7_left_static             7.0s  OK
+2026-11-21 12:42:08,142 INFO [26/68] S7_left_open_close         7.1s  OK
+2026-11-21 12:42:14,830 INFO [27/68] S7_right_static            6.7s  OK
+2026-11-21 12:42:21,832 INFO [28/68] S7_right_open_close        7.0s  OK
+2026-11-21 12:42:29,083 INFO [29/68] S8_left_static             7.3s  OK
+2026-11-21 12:42:36,865 INFO [30/68] S8_left_open_close         7.8s  OK
+2026-11-21 12:42:43,964 INFO [31/68] S8_right_static            7.1s  OK
+2026-11-21 12:42:51,213 INFO [32/68] S8_right_open_close        7.2s  OK
+2026-11-21 12:42:58,033 INFO [33/68] S9_left_static             6.8s  OK
+2026-11-21 12:43:05,143 INFO [34/68] S9_left_open_close         7.1s  OK
+2026-11-21 12:43:11,943 INFO [35/68] S9_right_static            6.8s  OK
+2026-11-21 12:43:18,607 INFO [36/68] S9_right_open_close        6.7s  OK
+2026-11-21 12:43:25,623 INFO [37/68] S10_left_static            7.0s  OK
+2026-11-21 12:43:32,976 INFO [38/68] S10_left_open_close        7.4s  OK
+2026-11-21 12:43:40,117 INFO [39/68] S10_right_static           7.1s  OK
+2026-11-21 12:43:47,418 INFO [40/68] S10_right_open_close       7.3s  OK
+2026-11-21 12:43:54,839 INFO [41/68] S11_left_static            7.4s  thermal MP4 and .npy match weakly (r=-0.58) | 833 thermal MP4 frame(s) differ from .npy (r<0.95; first: 0,1,2,3,4,5,6,7,8,9)
+2026-11-21 12:44:02,074 INFO [42/68] S11_left_open_close        7.2s  OK
+2026-11-21 12:44:12,575 INFO [43/68] S11_right_static          10.5s  OK
+2026-11-21 12:44:20,659 INFO [44/68] S11_right_open_close       8.1s  OK
+2026-11-21 12:44:28,383 INFO [45/68] S12_left_static            7.7s  OK
+2026-11-21 12:44:35,851 INFO [46/68] S12_left_open_close        7.5s  OK
+2026-11-21 12:44:43,163 INFO [47/68] S12_right_static           7.3s  OK
+2026-11-21 12:44:51,110 INFO [48/68] S12_right_open_close       7.9s  OK
+2026-11-21 12:44:58,738 INFO [49/68] S13_left_static            7.6s  OK
+2026-11-21 12:45:07,574 INFO [50/68] S13_left_open_close        8.8s  OK
+2026-11-21 12:45:16,195 INFO [51/68] S13_right_static           8.6s  OK
+2026-11-21 12:45:23,968 INFO [52/68] S13_right_open_close       7.8s  OK
+2026-11-21 12:45:30,635 INFO [53/68] S14_left_static            6.7s  OK
+2026-11-21 12:45:37,505 INFO [54/68] S14_left_open_close        6.9s  OK
+2026-11-21 12:45:44,726 INFO [55/68] S14_right_static           7.2s  OK
+2026-11-21 12:45:51,915 INFO [56/68] S14_right_open_close       7.2s  OK
+2026-11-21 12:46:00,426 INFO [57/68] S15_left_static            8.5s  OK
+2026-11-21 12:46:07,921 INFO [58/68] S15_left_open_close        7.5s  OK
+2026-11-21 12:46:15,188 INFO [59/68] S15_right_static           7.3s  OK
+2026-11-21 12:46:22,489 INFO [60/68] S15_right_open_close       7.3s  OK
+2026-11-21 12:46:29,574 INFO [61/68] S16_left_static            7.1s  OK
+2026-11-21 12:46:36,796 INFO [62/68] S16_left_open_close        7.2s  OK
+2026-11-21 12:46:43,739 INFO [63/68] S16_right_static           6.9s  OK
+2026-11-21 12:46:51,008 INFO [64/68] S16_right_open_close       7.3s  OK
+2026-11-21 12:46:58,400 INFO [65/68] S17_left_static            7.4s  OK
+2026-11-21 12:47:05,814 INFO [66/68] S17_left_open_close        7.4s  OK
+2026-11-21 12:47:13,175 INFO [67/68] S17_right_static           7.4s  OK
+2026-11-21 12:47:20,846 INFO [68/68] S17_right_open_close       7.7s  OK
+2026-11-21 12:47:21,068 INFO Duplicates: none
+2026-11-21 12:47:21,068 INFO Wrote reports\audit\dataset_audit.csv and reports\audit\audit_report.md

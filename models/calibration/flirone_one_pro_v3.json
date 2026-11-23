@@ -1,0 +1,28 @@
+{
+  "name": "flirone_one_pro_v3",
+  "created": "2026-11-21T17:29:30",
+  "camera": "FLIR ONE Pro (smartphone add-on)",
+  "method": "similarity: fixed scale + per-recording shift (v3)",
+  "note": "NOT a stereo calibration; derived from hand-mask overlap on the FLIROne dataset",
+  "video_hw": [
+    480,
+    640
+  ],
+  "video_box": [
+    0,
+    480,
+    140,
+    500
+  ],
+  "npy_hw": [
+    640,
+    480
+  ],
+  "fixed_scale": 1.25,
+  "rig_default": [
+    1.25,
+    -12.3,
+    -31.5
+  ],
+  "landmark_correction": "models/landmark_correction.json"
+}

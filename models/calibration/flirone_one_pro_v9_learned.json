@@ -1,0 +1,134 @@
+{
+ "name": "flirone_one_pro_v9_learned",
+ "created": "2026-11-22T16:38:42",
+ "camera": "FLIR ONE Pro (smartphone add-on)",
+ "mode": "learned",
+ "scale": 1.25,
+ "fixed_scale": 1.25,
+ "video_box": [
+  0,
+  480,
+  140,
+  500
+ ],
+ "video_hw": [
+  480,
+  640
+ ],
+ "npy_hw": [
+  640,
+  480
+ ],
+ "rig_default": [
+  1.25,
+  -12.3,
+  -31.5
+ ],
+ "shift_model": {
+  "features": [
+   "hand_size",
+   "cx",
+   "cy"
+  ],
+  "coef": [
+   [
+    -0.004578782631631746,
+    -0.007842289795607499,
+    0.007290252213707595
+   ],
+   [
+    0.012749328504233147,
+    -0.05590113273291415,
+    -0.026313389867720652
+   ]
+  ],
+  "intercept": [
+   -12.525262102488226,
+   -15.969737288840294
+  ]
+ },
+ "along_frac": {
+  "MCP": 0.08764078149623908,
+  "PIP": 0.10259014479405518
+ },
+ "trained_on": {
+  "frames": 1634,
+  "recordings": 68,
+  "subjects": 17
+ },
+ "validation": {
+  "comparison": [
+   {
+    "method": "rig",
+    "dice_median": 0.9054515690509263,
+    "dice_p10": 0.8069695082730515,
+    "dice_median_static": 0.9067901297493428,
+    "dice_median_open_close": 0.9033139872819951,
+    "joint_err_raw_median": 14.16451309346262,
+    "joint_err_corrected_median": 10.161191018971648,
+    "joint_err_corrected_static": 8.55375272847253,
+    "joint_err_corrected_open_close": 12.967465408930181,
+    "joint_err_corrected_p90": 24.91472310781111,
+    "n_points": 759
+   },
+   {
+    "method": "per_recording",
+    "dice_median": 0.9067976147544308,
+    "dice_p10": 0.8097002304960665,
+    "dice_median_static": 0.909364107701458,
+    "dice_median_open_close": 0.9032467258358823,
+    "joint_err_raw_median": 14.621122979240296,
+    "joint_err_corrected_median": 10.348645844714142,
+    "joint_err_corrected_static": 8.831950889030653,
+    "joint_err_corrected_open_close": 12.534457741482768,
+    "joint_err_corrected_p90": 24.141014321972268,
+    "n_points": 759
+   },
+   {
+    "method": "learned",
+    "dice_median": 0.9052988332794321,
+    "dice_p10": 0.8072035562534008,
+    "dice_median_static": 0.9073140228030074,
+    "dice_median_open_close": 0.9028278468969368,
+    "joint_err_raw_median": 14.080309965150681,
+    "joint_err_corrected_median": 10.132727460782968,
+    "joint_err_corrected_static": 8.477439843209092,
+    "joint_err_corrected_open_close": 12.598179594607732,
+    "joint_err_corrected_p90": 24.499062721234946,
+    "n_points": 759
+   },
+   {
+    "method": "hybrid",
+    "dice_median": 0.9068846397848427,
+    "dice_p10": 0.8097002304960665,
+    "dice_median_static": 0.909364107701458,
+    "dice_median_open_close": 0.9031548837133332,
+    "joint_err_raw_median": 14.591329331641981,
+    "joint_err_corrected_median": 10.312494709293402,
+    "joint_err_corrected_static": 8.808607504471711,
+    "joint_err_corrected_open_close": 12.631467160333628,
+    "joint_err_corrected_p90": 24.168284783195922,
+    "n_points": 759
+   },
+   {
+    "method": "oracle",
+    "dice_median": 0.9058658134783197,
+    "dice_p10": 0.8041229637885148,
+    "dice_median_static": 0.9086838399711157,
+    "dice_median_open_close": 0.9020450365674528,
+    "joint_err_raw_median": 14.365358792717668,
+    "joint_err_corrected_median": 10.467166270945333,
+    "joint_err_corrected_static": 9.216177615047055,
+    "joint_err_corrected_open_close": 13.481562319210248,
+    "joint_err_corrected_p90": 24.642153010246496,
+    "n_points": 759
+   }
+  ],
+  "tests": {
+   "hybrid_vs_per_recording_p": 4.586336853520302e-06,
+   "learned_vs_per_recording_p": 0.05720187007252448,
+   "hybrid_better_share": 0.5507246376811594
+  }
+ },
+ "note": "learned from hand-mask overlap of the FLIROne dataset; not a target-based stereo calibration"
+}

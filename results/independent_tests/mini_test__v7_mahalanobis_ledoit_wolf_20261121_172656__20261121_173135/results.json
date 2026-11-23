@@ -1,0 +1,94 @@
+{
+  "lock": {
+    "run_id": "mini_test__v7_mahalanobis_ledoit_wolf_20261121_172656__20261121_173135",
+    "dataset_id": "mini_test_20261121_173112",
+    "model_id": "v7_mahalanobis_ledoit_wolf_20261121_172656",
+    "created": "2026-11-21T17:31:35",
+    "features_sha256": "768065e6be16762336d3df5b206899b26e63985a67c6992952008edf42c2ebd4",
+    "manifest_sha256": "c1f3f36e0fd74ed136c4659d5e0a3ba1576d202f50b9b8194f3cf07022b6bc5d",
+    "model_sha256": "350f8750248a9f6218af19ad115d7e8848f14f32647df0fad5a84897cead5fd5",
+    "labels_sha256": "a9b7e1e5e3277e288d2457053cc3ae5db3c58f814324b961dcc31eb7bdf6d6fc",
+    "rule": "model applied as saved: no refitting, rescaling or threshold changes",
+    "previous_runs_same_dataset_and_model": [],
+    "subjects_overlapping_training": []
+  },
+  "n_recordings": 3,
+  "category_counts": {
+    "Normal measurement": 3
+  },
+  "label_report": {
+    "unmatched_label_rows": [
+      {
+        "subject": "P99",
+        "label": "healthy",
+        "source": "DUMMY - unmatched on purpose",
+        "label_raw": "healthy",
+        "hand": NaN,
+        "rec_id": NaN,
+        "joint": NaN
+      }
+    ],
+    "recordings_without_label": [],
+    "label_counts": {
+      "healthy": 2,
+      "arthritis": 1
+    },
+    "missing_source": 0,
+    "joint_level_rows": 0
+  },
+  "excluded_from_metrics": {
+    "unlabelled_or_other": 0,
+    "not_scored_quality_or_task": 0
+  },
+  "metrics_flag_vs_label": {
+    "n": 3,
+    "n_positive": 1,
+    "n_negative": 2,
+    "positive_class": "arthritis",
+    "confusion_matrix": {
+      "tn": 2,
+      "fp": 0,
+      "fn": 1,
+      "tp": 0
+    },
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "sensitivity": 0.0,
+    "recall": 0.0,
+    "false_negative_rate": 1.0,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.5,
+    "precision": NaN,
+    "f1": 0.0,
+    "roc_auc": 1.0,
+    "average_precision": 1.0,
+    "roc_curve": {
+      "fpr": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        1.0,
+        1.0
+      ]
+    },
+    "pr_curve": {
+      "precision": [
+        0.3333333333333333,
+        0.5,
+        1.0,
+        1.0
+      ],
+      "recall": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    "interpretation": "positive = flagged 'Potential anomaly'; the anomaly score is a distance from the healthy reference, not a probability"
+  },
+  "n_labelled_samples": 3
+}

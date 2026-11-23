@@ -1,0 +1,30 @@
+{
+  "mode": "SIMULATION (recorded data replayed; no live camera)",
+  "recording": "S2_right_static",
+  "seconds_simulated": 20.0,
+  "rgb_frames": 173,
+  "paired": 173,
+  "unpaired": 0,
+  "thermal_age_ms_median": 8.446133677464744,
+  "thermal_age_ms_max": 127.15920392385306,
+  "pairs_exact_frame": 0.6647398843930635,
+  "pairs_within_1_frame": 1.0,
+  "measured_frames": 173,
+  "processing_fps": 17.425659041229444,
+  "last_status": {
+    "thumb_MCP": "within healthy range",
+    "thumb_IP": "within healthy range",
+    "index_MCP": "within healthy range",
+    "index_PIP": "within healthy range",
+    "index_DIP": "within healthy range",
+    "middle_MCP": "within healthy range",
+    "middle_PIP": "within healthy range",
+    "middle_DIP": "within healthy range",
+    "ring_MCP": "within healthy range",
+    "ring_PIP": "within healthy range",
+    "ring_DIP": "within healthy range",
+    "little_MCP": "within healthy range",
+    "little_PIP": "within healthy range",
+    "little_DIP": "within healthy range"
+  }
+}

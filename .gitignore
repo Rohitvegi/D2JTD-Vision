@@ -1,0 +1,14 @@
+# environments and caches
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# private / large data (volunteer recordings and derived frames) and build outputs
+data/
+dist/
+baselines/
+logs/
+
+# Office lock files
+~$*

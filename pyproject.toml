@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rgb-thermal-hand"
+version = "1.0.0"
+description = "RGB–thermal hand-joint temperature analysis and arthritis screening-support research software (not a diagnostic device)"
+readme = "DEPLOYMENT.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "mediapipe==1.2.3", "numpy==2.5.5", "opencv-python==5.1.0.95", "pandas==3.1.1", "scipy==1.18.1",
+    "scikit-learn==1.9.1", "matplotlib==3.11.2", "pyyaml==6.0.4", "psutil==7.2.2", "joblib==1.6.0",
+    "openpyxl==3.1.5", "defusedxml==0.7.1", "pillow==13.0.0", "pyside6==6.12.0", "pytest==9.2.0",
+]
+
+[project.optional-dependencies]
+docs = ["python-docx==1.2.0", "python-pptx==1.0.2", "pymupdf==2.1"]
+
+[project.scripts]
+rgbthermal = "src.cli:main"
+
+[project.gui-scripts]
+rgbthermal-app = "src.cli:app_entry"
+
+[tool.setuptools]
+packages = ["src", "ui"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

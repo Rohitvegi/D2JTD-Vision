@@ -1,0 +1,58 @@
+# Project configuration — edit dataset_root to match your computer.
+# Use forward slashes or doubled backslashes on Windows.
+dataset_root: "C:/Users/rohit/Downloads/archive/FLIROne"
+
+seed: 42
+
+audit:
+  output_dir: "reports/audit"          # CSV, report and figures go here
+  metadata_dir: "data/metadata"        # a copy of the audit CSV for later stages
+  n_sample_frames: 40                  # radiometric frames sampled per recording for statistics
+  n_corr_frames: 10                    # frames used for the thermal MP4 <-> .npy spatial match
+  max_corr_lag: 15                     # frame offsets tested (+/-) when lining up thermal MP4 and .npy
+  scan_timestamps: true                # read every video frame's timestamp (slower, more thorough)
+  valid_temp_range_c: [10.0, 45.0]     # plausible skin/background range; outside = suspicious
+  hash_bytes: 16777216                 # bytes hashed from start and end of each .npy (16 MB)
+
+# Stages 4-12 (pipeline). Run with the Python 3.12 env: .venv312\Scripts\python.exe
+pipeline:
+  processed_dir: "data/processed"        # per-frame CSVs, registration table
+  results_dir: "reports/results"         # tables, figures, final report
+  landmark_model: "models/hand_landmarker.task"
+  min_detection_confidence: 0.5
+  frame_stride: 3                        # analyse every 3rd frame (~2.8 fps of ~8.3 fps)
+  video_box: [0, 480, 140, 500]          # y0, y1, x0, x1 of the image inside the MP4 letterbox
+  # Recordings whose RGB and thermal MP4 file names are swapped on disk (found by the Stage 1 audit)
+  swapped_video_files: ["S11_left_static"]
+  registration:
+    n_frames: 16                         # frames sampled per recording to fit RGB->thermal
+    scale_min: 0.80
+    scale_max: 1.40
+    scale_step: 0.02
+    # Rigid rig: scale is a camera property. First free-scale run over all 68 recordings gave
+    # median 1.25 (IQR 1.24-1.26; data/processed/registration_free_scale.csv), so it is fixed and
+    # only the translation (parallax, distance-dependent) is fitted per recording. null = free.
+    fixed_scale: 1.25
+    # Fallback when a recording's own fit is worse on held-out frames: rig median (s, tx, ty)
+    # over all 68 recordings from the fixed-scale run.
+    rig_default: [1.25, -12.3, -31.5]
+    # v9 calibration found by src.calibration from all 68 recordings (scale, angle, per-frame shift from the hand).
+    # Calibrated on S1-S5 and tested on unseen S6-S17: joint error 9.97 px vs 11.04 px for per-recording
+    # fitting (reports/v9_calibration). per_recording = v3 behaviour.
+    mode: learned
+    calibration_model: models/calibration/flirone_one_pro_v9_found.json
+  roi:
+    # Qiao et al. 2025: radius = beta * |MCP - PIP| of that finger
+    beta: {thumb: 0.42, index: 0.28, middle: 0.28, ring: 0.31, little: 0.35}
+    # v2 (after RQ3 failed with pure Qiao radii, see reports/results_v1_qiao_radius): cap each radius at
+    # width_frac x distance to the nearer finger edge (perpendicular to the bone). "qiao" = v1 behaviour.
+    radius_mode: finger_width
+    width_frac: 0.9
+    on_skin_frac: 0.95                   # ROI counts as "on skin" if this fraction is inside the hand mask
+    usable_frac: 0.60                    # ROI used for features if at least this fraction is on the hand
+    min_px: 32                           # ...and at least this many core pixels (= 2 native sensor pixels)
+  # Joint-position correction learned from the hand-clicked joints (src.landmark_correction ->
+  # models/landmark_correction.json). Applied when the file exists; set false to disable.
+  use_landmark_correction: true
+  frame_valid_joint_frac: 0.80           # frame usable if this fraction of joint centres fall on the hand
+  native_px_per_axis: 4                  # FLIR ONE Pro spec 160x120 sensor -> 640x480 output (unverified)

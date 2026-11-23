@@ -1,0 +1,228 @@
+{
+  "open_threshold": 1.877729339698786,
+  "RQ1": {
+    "static_valid_frac": 1.0,
+    "pass_": true,
+    "worst_static_recording": [
+      {
+        "rec_id": "S10_left_static",
+        "task": "static",
+        "valid_frac": 1.0
+      }
+    ]
+  },
+  "RQ2": {
+    "dice_heldout_median": 0.910982189815734,
+    "dice_heldout_p10": 0.8182740368703605,
+    "dice_heldout_min": 0.7100063267345798,
+    "recordings_dice_ge_090": 40,
+    "n_recordings": 68,
+    "dice_pass": true,
+    "scale_median": 1.25,
+    "scale_iqr": [
+      1.25,
+      1.25
+    ],
+    "tx_median": -12.3,
+    "ty_median": -31.5,
+    "tx_iqr": [
+      -12.811009261300349,
+      -12.3
+    ],
+    "ty_iqr": [
+      -31.5,
+      -30.43041025718877
+    ],
+    "landmark_err_median_px": 14.30129122772311,
+    "landmark_err_median_native": 3.5753228069307776,
+    "landmark_err_p90_px": 26.379450096327428,
+    "n_annotated_points": 777,
+    "n_annotated_frames": 136,
+    "landmark_pass": false,
+    "landmark_note": "verdict uses the leave-one-subject-out corrected error (the pipeline applies the along-finger correction)",
+    "landmark_err_raw_median_px": 14.30129122772311,
+    "landmark_err_corrected_loso_median_px": 10.348082031420441,
+    "landmark_err_corrected_loso_p90_px": 23.689666092276365,
+    "landmark_err_corrected_static_px": 8.815410265276494,
+    "landmark_err_corrected_open_close_px": 13.334428078364777,
+    "roi_temp_error_raw_median_C": 0.06665420532226562,
+    "roi_temp_error_corrected_median_C": 0.048274993896484375,
+    "roi_temp_error_corrected_p90_C": 0.2332221984863281,
+    "landmark_correction": {
+      "MCP": 0.09297230480178606,
+      "PIP": 0.10749717916795687
+    }
+  },
+  "RQ3": {
+    "on_skin_frac_all": 0.982892243655453,
+    "pass_": true,
+    "usable_frac_all": 0.9968937346628148,
+    "median_native_px": 75.5
+  },
+  "RQ4": {
+    "joints_passing": 6,
+    "n_joints": 14,
+    "mean10_mdc95": 0.26349646249943864,
+    "mean10_icc": 0.9855405069142763,
+    "median_joint_mdc95": 0.41691143838559264,
+    "single_frame_sd_mean10_median": 0.07427348599003147,
+    "pass_": true
+  },
+  "RQ5": {
+    "mean10": 0.38550880095537965,
+    "mean10_sd": 0.7348835936742734,
+    "mean10_ci": [
+      0.09572398529333226,
+      0.7567324813674474
+    ],
+    "qiao_healthy_in_ci": false,
+    "h1_joints_supported": 3,
+    "h1_joints_tested": 10,
+    "h2_joints_median_lt_05": 0,
+    "h2_n_joints": 14,
+    "h2_supported": false,
+    "lr_frac_all_lt_05": 0.13865546218487396
+  },
+  "RQ6": [
+    {
+      "variable": "dorsum_slope",
+      "n_hands": 34,
+      "static_median": 0.14772188893676694,
+      "open_close_median": 0.05048856466118966,
+      "diff_median": -0.0765900140277371,
+      "rank_biserial": -0.3176470588235294,
+      "p_hands": 0.10871651535853744,
+      "p_subjects": 0.1454315185546875
+    },
+    {
+      "variable": "jointmean_slope",
+      "n_hands": 34,
+      "static_median": 0.2113095829672398,
+      "open_close_median": 0.16249010143169668,
+      "diff_median": -0.13546535424614214,
+      "rank_biserial": -0.06554621848739496,
+      "p_hands": 0.7484260409837589,
+      "p_subjects": 0.5790557861328125
+    },
+    {
+      "variable": "D2JTD_mean10_slope",
+      "n_hands": 34,
+      "static_median": 0.03652915038775418,
+      "open_close_median": -0.05427782325891917,
+      "diff_median": -0.05138173899752827,
+      "rank_biserial": -0.23025210084033612,
+      "p_hands": 0.24850467371288687,
+      "p_subjects": 0.3778228759765625
+    },
+    {
+      "variable": "D2JTD_mean10",
+      "n_hands": 34,
+      "static_median": 0.13659400939941407,
+      "open_close_median": 0.12933177947998048,
+      "diff_median": -0.07584452629089364,
+      "rank_biserial": -0.1899159663865546,
+      "p_hands": 0.34285025869030505,
+      "p_subjects": 0.17425537109375
+    },
+    {
+      "variable": "dorsum_T",
+      "n_hands": 34,
+      "static_median": 32.71883773803711,
+      "open_close_median": 32.90389537811279,
+      "diff_median": 0.17453765869140625,
+      "rank_biserial": 0.4983164983164983,
+      "p_hands": 0.010891349021482645,
+      "p_subjects": 0.0128631591796875
+    },
+    {
+      "variable": "jointmean_T",
+      "n_hands": 34,
+      "static_median": 32.460351603371755,
+      "open_close_median": 32.98235140789996,
+      "diff_median": 0.30656854398957734,
+      "rank_biserial": 0.6,
+      "p_hands": 0.001678760047070682,
+      "p_subjects": 0.0031585693359375
+    }
+  ],
+  "RQ7": [
+    {
+      "model": "maxz",
+      "delta_C": 0.25,
+      "specificity": 0.9411764705882353,
+      "sens_single_joint": 0.06302521008403361,
+      "sens_all_10_joints": 0.11764705882352941
+    },
+    {
+      "model": "maxz",
+      "delta_C": 0.5,
+      "specificity": 0.9411764705882353,
+      "sens_single_joint": 0.0819327731092437,
+      "sens_all_10_joints": 0.3235294117647059
+    },
+    {
+      "model": "maxz",
+      "delta_C": 1.0,
+      "specificity": 0.9411764705882353,
+      "sens_single_joint": 0.23319327731092437,
+      "sens_all_10_joints": 0.7058823529411765
+    },
+    {
+      "model": "maxz",
+      "delta_C": 1.5,
+      "specificity": 0.9411764705882353,
+      "sens_single_joint": 0.3697478991596639,
+      "sens_all_10_joints": 1.0
+    },
+    {
+      "model": "maxz",
+      "delta_C": 2.0,
+      "specificity": 0.9411764705882353,
+      "sens_single_joint": 0.5189075630252101,
+      "sens_all_10_joints": 1.0
+    },
+    {
+      "model": "mahal",
+      "delta_C": 0.25,
+      "specificity": 0.8823529411764706,
+      "sens_single_joint": 0.12605042016806722,
+      "sens_all_10_joints": 0.14705882352941177
+    },
+    {
+      "model": "mahal",
+      "delta_C": 0.5,
+      "specificity": 0.8823529411764706,
+      "sens_single_joint": 0.1722689075630252,
+      "sens_all_10_joints": 0.47058823529411764
+    },
+    {
+      "model": "mahal",
+      "delta_C": 1.0,
+      "specificity": 0.8823529411764706,
+      "sens_single_joint": 0.49159663865546216,
+      "sens_all_10_joints": 1.0
+    },
+    {
+      "model": "mahal",
+      "delta_C": 1.5,
+      "specificity": 0.8823529411764706,
+      "sens_single_joint": 0.9432773109243697,
+      "sens_all_10_joints": 1.0
+    },
+    {
+      "model": "mahal",
+      "delta_C": 2.0,
+      "specificity": 0.8823529411764706,
+      "sens_single_joint": 1.0,
+      "sens_all_10_joints": 1.0
+    }
+  ],
+  "sync": {
+    "counts": {
+      "aligned": 32,
+      "ambiguous (tie with other lags)": 1,
+      "weak signal": 1
+    },
+    "median_corr": 0.844021903302053
+  }
+}

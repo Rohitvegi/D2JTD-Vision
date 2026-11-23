@@ -1,0 +1,8 @@
+rec_id,frame,joint,check,issue
+S11_right_open_close,921,middle,length,clicked MCP-PIP length 1.54x the bone length
+S5_left_static,675,middle,order,PIP not further along the finger than MCP (labels swapped?)
+S5_left_static,675,ring,order,PIP not further along the finger than MCP (labels swapped?)
+S7_left_static,75,index_MCP,finger,click is nearest the pipeline's ring_MCP (finger mix-up?)
+S7_left_static,75,ring_MCP,finger,click is nearest the pipeline's index_MCP (finger mix-up?)
+S7_left_static,75,index_PIP,finger,click is nearest the pipeline's ring_PIP (finger mix-up?)
+S7_left_static,75,ring_PIP,finger,click is nearest the pipeline's index_PIP (finger mix-up?)

@@ -1,0 +1,6 @@
+# Stage 1 (dataset audit)
+numpy>=1.26
+opencv-python>=4.9
+pandas>=2.1
+matplotlib>=3.8
+pyyaml>=6.0

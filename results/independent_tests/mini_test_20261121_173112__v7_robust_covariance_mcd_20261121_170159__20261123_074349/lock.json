@@ -1,0 +1,13 @@
+{
+  "run_id": "mini_test_20261121_173112__v7_robust_covariance_mcd_20261121_170159__20261123_074349",
+  "dataset_id": "mini_test_20261121_173112",
+  "model_id": "v7_robust_covariance_mcd_20261121_170159",
+  "created": "2026-11-23T07:43:49",
+  "features_sha256": "768065e6be16762336d3df5b206899b26e63985a67c6992952008edf42c2ebd4",
+  "manifest_sha256": "c1f3f36e0fd74ed136c4659d5e0a3ba1576d202f50b9b8194f3cf07022b6bc5d",
+  "model_sha256": "410ae51d8ed4cf8fbc414a85d5446ded0c93865dc60f902aee2e84d53e56bced",
+  "labels_sha256": null,
+  "rule": "model applied as saved: no refitting, rescaling or threshold changes",
+  "previous_runs_same_dataset_and_model": [],
+  "subjects_overlapping_training": []
+}

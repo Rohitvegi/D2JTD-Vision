@@ -1,0 +1,18 @@
+{
+  "recording": "S2_right_static",
+  "frames": 200,
+  "median_ms": {
+    "landmarks": 10.361699998611584,
+    "thermal_mask": 13.025849999394268,
+    "rois": 9.875750009086914,
+    "total": 33.32309999677818
+  },
+  "fps_equivalent": 30.009212831239715,
+  "rss_baseline_MB": 115.7734375,
+  "rss_after_model_load_MB": 158.19140625,
+  "rss_peak_MB": 455.0703125,
+  "landmark_model_MB": 7.456879615783691,
+  "reference_model_KB": 1.515625,
+  "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "logical_cpus": 16
+}

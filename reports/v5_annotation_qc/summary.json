@@ -1,0 +1,194 @@
+{
+  "n_points": 777,
+  "n_frames": 136,
+  "flagged_frames": 3,
+  "flags_by_check": {
+    "finger": 4,
+    "order": 2,
+    "length": 1
+  },
+  "points_err_gt_40px": 15,
+  "thermal_mediapipe_frames_found": 123,
+  "three_cornered_hat": {
+    "all": {
+      "raw": {
+        "n": 701,
+        "rms_pair_gap_px": {
+          "A-R": 21.96768314524078,
+          "A-T": 24.439072333253527,
+          "R-T": 20.994751222722936
+        },
+        "own_rms_error_px": {
+          "annotation": 17.875510907043576,
+          "rgb_mapped": 12.76891587339591,
+          "thermal_mediapipe": 16.665364272111315
+        },
+        "median_bias_px": {
+          "A-R": [
+            2.27008056640625,
+            -11.19427490234375
+          ],
+          "A-T": [
+            -0.6167144775390625,
+            -1.59844970703125
+          ],
+          "R-T": [
+            -2.43133544921875,
+            8.975677490234375
+          ]
+        }
+      },
+      "bias_removed": {
+        "n": 701,
+        "rms_pair_gap_px": {
+          "A-R": 18.798911016482013,
+          "A-T": 24.392985633373694,
+          "R-T": 18.207343457463487
+        },
+        "own_rms_error_px": {
+          "annotation": 17.562879145196348,
+          "rgb_mapped": 6.704053366198387,
+          "thermal_mediapipe": 16.928172501519548
+        },
+        "median_bias_px": {
+          "A-R": [
+            2.27008056640625,
+            -11.19427490234375
+          ],
+          "A-T": [
+            -0.6167144775390625,
+            -1.59844970703125
+          ],
+          "R-T": [
+            -2.43133544921875,
+            8.975677490234375
+          ]
+        }
+      }
+    },
+    "static": {
+      "raw": {
+        "n": 395,
+        "rms_pair_gap_px": {
+          "A-R": 24.095514621467036,
+          "A-T": 23.083968155912437,
+          "R-T": 13.889675262600752
+        },
+        "own_rms_error_px": {
+          "annotation": 21.45390794000021,
+          "rgb_mapped": 10.969214145750268,
+          "thermal_mediapipe": 8.520529321889308
+        },
+        "median_bias_px": {
+          "A-R": [
+            1.86041259765625,
+            -10.7440185546875
+          ],
+          "A-T": [
+            -0.685028076171875,
+            -3.826324462890625
+          ],
+          "R-T": [
+            -1.826934814453125,
+            7.02099609375
+          ]
+        }
+      },
+      "bias_removed": {
+        "n": 395,
+        "rms_pair_gap_px": {
+          "A-R": 21.59931029216825,
+          "A-T": 23.00411656699705,
+          "R-T": 11.190144232796587
+        },
+        "own_rms_error_px": {
+          "annotation": 20.862649114800387,
+          "rgb_mapped": 5.592859466327039,
+          "thermal_mediapipe": 9.692226314975668
+        },
+        "median_bias_px": {
+          "A-R": [
+            1.86041259765625,
+            -10.7440185546875
+          ],
+          "A-T": [
+            -0.685028076171875,
+            -3.826324462890625
+          ],
+          "R-T": [
+            -1.826934814453125,
+            7.02099609375
+          ]
+        }
+      }
+    },
+    "open_close": {
+      "raw": {
+        "n": 306,
+        "rms_pair_gap_px": {
+          "A-R": 18.869468216491217,
+          "A-T": 26.08442561224534,
+          "R-T": 27.581244731424245
+        },
+        "own_rms_error_px": {
+          "annotation": 11.741572070196035,
+          "rgb_mapped": 14.771334269237991,
+          "thermal_mediapipe": 23.29233231862265
+        },
+        "median_bias_px": {
+          "A-R": [
+            2.7846298217773438,
+            -11.610458374023438
+          ],
+          "A-T": [
+            -0.40511322021484375,
+            -0.082489013671875
+          ],
+          "R-T": [
+            -3.4781723022460938,
+            11.131690979003906
+          ]
+        }
+      },
+      "bias_removed": {
+        "n": 306,
+        "rms_pair_gap_px": {
+          "A-R": 14.360421785205448,
+          "A-T": 26.04742420391115,
+          "R-T": 24.129788750151576
+        },
+        "own_rms_error_px": {
+          "annotation": 12.297221563844372,
+          "rgb_mapped": 7.416202239605133,
+          "thermal_mediapipe": 22.961852047868817
+        },
+        "median_bias_px": {
+          "A-R": [
+            2.7846298217773438,
+            -11.610458374023438
+          ],
+          "A-T": [
+            -0.40511322021484375,
+            -0.082489013671875
+          ],
+          "R-T": [
+            -3.4781723022460938,
+            11.131690979003906
+          ]
+        }
+      }
+    }
+  },
+  "rq2_sensitivity": {
+    "all_points": {
+      "raw_median_px": 14.29736756548002,
+      "corrected_loso_median_px": 10.33928672131782
+    },
+    "without_flagged_frames": {
+      "n_points": 760,
+      "raw_median_px": 14.077019045704382,
+      "corrected_loso_median_px": 10.066645363192293
+    }
+  },
+  "interpretation": "Clicks are internally consistent apart from the flagged frames. The systematic along-finger offset belongs to the RGB-mapped joints (A-T median bias ~0, A-R and R-T ~10 px), i.e. it is a pipeline error that the v3 correction addresses. The clicking error estimate is an upper bound because R and T share the MediaPipe model; a second annotation pass is needed to measure it directly."
+}

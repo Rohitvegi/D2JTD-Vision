@@ -1,0 +1,52 @@
+{
+  "n_recordings": 68,
+  "groups": {
+    "relative_D2JTD": 14,
+    "relative_hand": 28,
+    "absolute": 58,
+    "spatial": 18,
+    "temporal": 4
+  },
+  "stability_by_group": [
+    {
+      "group": "absolute",
+      "icc31": 0.972,
+      "mdc95": 0.903
+    },
+    {
+      "group": "relative_D2JTD",
+      "icc31": 0.983,
+      "mdc95": 0.418
+    },
+    {
+      "group": "relative_hand",
+      "icc31": 0.958,
+      "mdc95": 0.476
+    },
+    {
+      "group": "spatial",
+      "icc31": 0.971,
+      "mdc95": 0.286
+    },
+    {
+      "group": "temporal",
+      "icc31": 0.398,
+      "mdc95": 0.188
+    }
+  ],
+  "ablation_decision": [
+    {
+      "model": "mahalanobis_ledoit_wolf",
+      "baseline_score": 0.5707282913165267,
+      "chosen": "S3_D2JTD+spatial",
+      "chosen_score": 0.8123249299719889
+    },
+    {
+      "model": "robust_z_max",
+      "baseline_score": 0.407563025210084,
+      "chosen": "S2_D2JTD+relative_hand",
+      "chosen_score": 0.6085434173669467
+    }
+  ],
+  "decision_rule": "replace D2JTD-only only if selection score >= baseline + 0.02 and specificity >= 0.90"
+}

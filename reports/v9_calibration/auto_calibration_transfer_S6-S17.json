@@ -1,0 +1,18 @@
+{
+ "v3 per-recording fit (s=1.25)": {
+  "joint_err_corrected_median": 11.04,
+  "static": 9.53,
+  "open_close": 13.23,
+  "dice_median": 0.903,
+  "n_points": 551,
+  "n_dice_frames": 1116
+ },
+ "auto-calibrated from S1-S5": {
+  "joint_err_corrected_median": 10.87,
+  "static": 8.53,
+  "open_close": 13.24,
+  "dice_median": 0.913,
+  "n_points": 551,
+  "n_dice_frames": 1116
+ }
+}
